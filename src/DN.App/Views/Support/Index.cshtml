@@ -1,0 +1,31 @@
+﻿@using System.Collections.Generic;
+
+@model List<SupportModel>
+
+@{
+    ViewBag.Title = "Run";
+    Layout = null;
+}
+
+<table>
+    <tr>
+        <th>Số thứ tự</th>
+        <th>Ngày hỏi</th>
+        <th>Ngày trả lời</th>
+        <th>Tên công ty</th>
+        <th>Email</th>
+        <th>Địa chỉ</th>
+    </tr>
+    @for (int i = 0, size = Model.Count; i < size; i++)
+    {
+        var item = Model[i];
+        <tr>
+            <td>@(i + 1)</td>
+            <td>@item.QuestionDay</td>
+            <td>@item.AnswerDay</td>
+            <td>@item.CompanyName</td>
+            <td>@item.CompanyEmail</td>
+            <td>@item.CompanyAddress</td>
+        </tr>
+    }
+</table>
