@@ -1,10 +1,7 @@
-﻿using DN.App.Helpers;
-using System;
-using System.Collections.Generic;
+﻿using DN.Core.Helpers;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Web;
 using System.Web.Mvc;
 
 namespace DN.App.Controllers
@@ -21,9 +18,9 @@ namespace DN.App.Controllers
             Response.ContentType = "application/vnd.ms-excel";
             Response.ContentEncoding = Encoding.GetEncoding("utf-8");
             Response.Charset = "utf-8";
-            Response.BinaryWrite(Encoding.GetEncoding("utf-8").GetPreamble());       
+            Response.BinaryWrite(Encoding.GetEncoding("utf-8").GetPreamble());
 
             return View(viewModel);
-        }     
+        }
     }
 }
